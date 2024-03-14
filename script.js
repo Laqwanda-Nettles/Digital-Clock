@@ -7,7 +7,6 @@ function getTodaysDate() {
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   //get day name based off day number
   const dayName = daysOfWeek[dayNumber];
-  console.log(dayName);
 
   //month displays as a number (0-11)
   const monthNumber = date.getMonth();
@@ -28,15 +27,12 @@ function getTodaysDate() {
   ];
   //get month name based of month number
   const monthName = months[monthNumber];
-  console.log(monthName);
 
   //get date number
   const dateNumber = date.getDate();
-  console.log(dateNumber);
 
   //get year
   const year = date.getFullYear();
-  console.log(year);
 
   //function to get today's date
 
@@ -60,7 +56,6 @@ function updateTime() {
 
   //Determine whether it's AM or PM
   const meridiem = hours < 12 ? "AM" : "PM";
-  console.log(formattedHours + "" + meridiem);
 
   //add leading zeros if necessary
   minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -68,7 +63,7 @@ function updateTime() {
 
   //update time display
   const time = document.getElementById("display-time");
-  time.innerHTML = `<p id="time">${formattedHours} : ${minutes} : ${seconds} ${meridiem}</p>`;
+  time.innerHTML = `<p id="time">${formattedHours}:${minutes}:${seconds} ${meridiem}</p>`;
 
   //Determine time of day message
   let greeting, backgroundImage;
@@ -98,4 +93,5 @@ function updateTime() {
 }
 updateTime();
 
+//update every second
 setInterval(updateTime, 1000);
