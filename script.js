@@ -1,3 +1,4 @@
+//function to get today's date
 function getTodaysDate() {
   //create a new Date object
   const date = new Date();
@@ -34,8 +35,7 @@ function getTodaysDate() {
   //get year
   const year = date.getFullYear();
 
-  //function to get today's date
-
+  //display date
   let today = document.getElementById("display-date");
   today.innerHTML = `<p><span id="day">${dayName}</span> ${monthName} ${dateNumber}, ${year}</p>`;
 }
